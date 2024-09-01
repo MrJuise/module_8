@@ -1,0 +1,18 @@
+'''
+Задание "Программистам всё можно":
+Пора разрушать шаблоны привычного нам Python! Вот вас раздражает, что мы не можем сложить число(int) и строку(str)? Давайте исправим это недоразумение!
+'''
+def add_everything_up(a, b):
+    try:
+        c = a + b
+        return c
+    except TypeError:
+        a = str(a)
+        b = str(b)
+        c = a + b
+        return c
+
+
+print(add_everything_up(123.456, 'строка'))
+print(add_everything_up('яблоко', 4215))
+print(add_everything_up(123.456, 7))
